@@ -1,0 +1,279 @@
+/*=======================================
+	Misc. Cheats & Hack
+=========================================*/
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+::selection {
+	color:#5CC49B;
+	background-color: #fff;
+}
+::-moz-selection {
+	color:#5CC49B;
+	background-color: #fff;
+}
+
+a::selection {
+	color:#777;
+}
+a::-moz-selection {
+	color:#777;
+}  
+
+input,
+textarea {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 4px;
+    background-color: #eee;
+    border: 0px;
+    outline-color: #5CC49B;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+input:focus,
+textarea:focus {background-color: #dbdbdb;}
+
+a {
+    color: #FF5335;
+    transition: 0.8s;
+}
+
+a:hover {
+    color: #5CC49B;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: 0.8s;
+}  
+/*=======================================
+	Nav-Style.css
+=========================================
+
+Project	:	nav:target
+Source	:	https://github.com/jimram/nav-target
+Author	:	Jim Ramsden
+URL	:	jimramsden.com
+
+
+Contents:
+
+	- Nav Container
+	- Menu List
+	- Triggers
+	- Breakpoints
+	- Helpers
+
+/*=======================================
+	Nav Container 
+=======================================*/
+
+/* Default state */
+
+#main-nav {
+	padding:1em 0;
+	position: static;
+	top:-100%; /* this is how far the nav slides in from */
+    -webkit-transition:top .5s cubic-bezier(.10, .10, .25, .90);  
+    -moz-transition:top .5s cubic-bezier(.10, .10, .25, .90);  
+    -o-transition:top .5s cubic-bezier(.10, .10, .25, .90);  
+    transition:top .5s cubic-bezier(.10, .10, .25, .90); 
+}
+
+
+/* Triggered state */
+
+#main-nav:target {
+	position: absolute; /* use absolute or fixed - if you have a small/short menu */
+	top:0;
+	left:0;
+	right:0;
+	padding:2em;
+	background:#fff;
+	border-bottom:1px solid #e2e2e2;
+}
+
+
+/*=======================================
+	Menu list
+=======================================*/
+
+.menu {
+    font-family: 'Lato', sans-serif;
+    font-size: 140%;
+	margin:0 auto;
+	max-width:90%;
+	list-style: none;
+	padding:0;
+	border-bottom:1px solid #222222;
+	text-align: center;
+}
+
+.menu li {
+	padding: 0.5em 0.5em;
+	display: inline-block;
+		transition: .8s;
+  		-webkit-transition: .8s; 
+}
+
+.menu li a {
+	font-weight:100;
+	display:block;
+	padding:0.5em 0.5em;
+	color: #5CC49B;
+			transition: .8s;
+  		-webkit-transition: .8s; 
+}
+
+	.menu a:hover,
+	.menu a:focus {
+		background:#fff;
+		padding:0.5em 0.5em;
+		border-radius: 7px;
+			transition: .8s;
+  		-webkit-transition: .8s; 
+	}
+
+	#main-nav:target .menu a:hover,
+	#main-nav:target .menu ai:focus {
+		background: #F9F9F9;
+		padding: 0.5em 0.5em;
+		border-radius: 7px;
+			transition: .8s;
+  		-webkit-transition: .8s; 
+	}
+
+	.menu a:focus:after {
+		content: " [" attr(accesskey) "] ";
+		font-weight:normal;
+	}
+
+	.menu a:hover:after {
+		display: none;
+	}
+
+.menu:before {
+	content:""attr(data-menuTitle)"";
+	padding:0.5em 0;
+	display:block;
+	font-weight:300;
+}
+
+/*=======================================
+	Triggers
+=======================================*/
+
+.jump-link {
+	position: absolute;
+	top:0em;
+	left:0em;
+	width:2em;
+	height:2em;
+	display:block;
+	text-align:center;
+	line-height:2em;
+	background:#333;
+	color:#fff;
+}
+
+	.jump-link:hover,
+	.jump-link:focus {
+		background:#5CC49B;
+		text-decoration:none;
+	}
+
+	.jump-link:after {
+		position:absolute;
+		margin-left:2em;
+		top:0;
+		color:#c66;
+		background:#fff;
+		padding:0 0.5em;
+		display: block;
+	}
+
+	.jump-link:hover:after {
+		display: none;
+	}
+
+#nav-open:before {
+	content:'\2630'; /* Hamburger symbol */
+}
+
+	#nav-open:focus:after {
+		content:'menu';
+	}
+
+#nav-close:before {
+	content:'X'; /* Multiply symbol, '\2a2f' */
+}
+
+	#nav-close:focus:after {
+		content:'close';
+	}
+
+#nav-close {
+	display: none; /* hides close button until menu is triggered */
+}
+
+#main-nav:target #nav-close {
+	display: block;
+}
+
+/*=======================================
+	Breakpoints
+=======================================*/
+
+@media only screen and (min-width:35em) {
+
+	html {
+		font-size:16px; 
+	}
+}
+
+@media only screen and (min-width:40em) {
+	
+	html {
+		font-size:18px; 
+	}
+}
+
+@media only screen and (min-width:45em) {
+	
+	html {
+		font-size:20px; 
+	}
+}
+
+@media only screen and (max-width: 730px) {
+/* was 480px */
+ 			
+ 			menu{
+ 			     border-top:1px solid #222222;
+                 border-bottom: none;
+ 			}
+ 			
+ 			.menu li {
+	            display: block;
+                padding: 1em;
+                line-height: 2em;
+                border-bottom: 1px solid #222;
+            }    
+   
+}
+
+/*=======================================
+	Helpers
+=======================================*/
+
+.vishid {
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	position: absolute;
+}
