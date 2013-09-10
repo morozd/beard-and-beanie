@@ -25,16 +25,18 @@ body {
  .boom {
 	font-family: 'Lato', sans-serif;
 	font-size: 2em;
-	font-weight:300; 
-	text-align: right;
+	font-weight:300;
+	text-align: left;
 	line-height: 1em;
-	color: #eeeeee;  
-	margin-left: 25%; 
-	margin-right: 5%;
+	color: #eeeeee;
+	margin-top: 14%;  
+	margin-left: 5%; 
+	margin-right: 30%;
+	margin-bottom: -15px;
 	padding: 12px;
 	display: block; 
 	text-shadow: 1px 1px #acacac;
-	background-color: rgba(33, 33, 33, 0.0122);
+	background-color: rgba(33, 33, 33, 0.0191);
 	border-radius: 7px;
 }
   
