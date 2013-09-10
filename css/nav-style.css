@@ -26,7 +26,7 @@ a::-moz-selection {
 input,
 textarea {
     font-family: 'Lato', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     padding: 10px;
     margin: 7px;
     border-radius: 4px;
@@ -106,6 +106,7 @@ Contents:
 .menu {
     font-family: 'Lato', sans-serif;
     font-size: 140%;
+    font-weight: 300;
 	margin:0 auto;
 	max-width:90%;
 	list-style: none;
@@ -122,7 +123,6 @@ Contents:
 }
 
 .menu li a {
-	font-weight:100;
 	display:block;
 	padding:0.5em 0.5em;
 	color: #5CC49B;
