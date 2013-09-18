@@ -4,7 +4,7 @@ layout: posts
 author: eli
 ---
 
-####The original list by [mrmrs](http://mrmrs.cc/) can be found at [xn--h4hg.ws](http://xn--h4hg.ws/2013/04/16/front-end-reading-list/)
+####The original list by [Adam Morse](http://mrmrs.cc/) can be found at [xn--h4hg.ws](http://xn--h4hg.ws/2013/04/16/front-end-reading-list/)
 
 * [How to learn CSS part 1: The HTML spec](http://www.w3.org/html/wg/drafts/html/master/) - w3C   
  
@@ -37,4 +37,7 @@ Also of note, but not from the original list:
 * [Copywriting is interface design](https://gettingreal.37signals.com/ch09_Copywriting_is_Interface_Design.php) - 37 signals
 
 * [CSS guide](http://inserthtml.com/codex/css-guide-welcome/) - insterthtml
+
+* [Do as little as possible](http://alistapart.com/column/do-as-little-as-possible) - Lyza Danger Gardner
+
 
