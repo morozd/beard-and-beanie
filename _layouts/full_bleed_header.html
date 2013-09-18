@@ -1,0 +1,24 @@
+{% include _head.html %}
+<body>
+  <article>
+    <header style="padding: 1em; background:#eee url({{page.header_img}}) no-repeat center center;" class="header-full-bleed center row">  
+      <h1 style="color:{{page.text_color}};" class="h1 full-bleed-title">{{page.title}}</h1>
+      <cite style="font-size: 12px; text-align: right; position: absolute; top: 1rem; right: 2rem; text-transform: none; opacity: 0.5;"><a style="color: #333;" href="{{page.source_url}}">{{page.source_title}}</a></cite>
+      </header>
+      {% include _navigation.html %}
+    <div class="single-column">
+        {{content}}
+        {% if page.author %}
+        <footer>
+        <p class="post-footer">
+          By {{page.author}}
+          on <time datetime="{{page.date}}">{{page.date | date: "%d %B %Y"}}</time> 
+        </p>
+      </footer>
+        {% endif %}
+    </div>
+    </article>
+    {% include _footer.html %}
+    {% include _google_analytics.html %}
+  </body>
+</html>

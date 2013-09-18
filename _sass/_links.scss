@@ -1,0 +1,10 @@
+a { text-decoration:none; color: #5CC49B;}
+.footer-link {
+  color:#5CC49B;
+  &:hover {
+    color:#222; 
+  }
+}
+
+
+a {color: #5CC49B;}

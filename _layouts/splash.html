@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>	
+  <title>
+    {{ site.title }}
+  </title>
+  <meta name="author" content="Eli Mellen">
+  <meta name="description" content="A creative workshop on MDI in Maine offering services in website design and development, archival digitization, database design and community management.">
+  <meta name="keywords" content="MDI,Maine,Bar Harbor,Web Design,Web Development,Web,Design,Development,Web Dev,Webdev,Print,Database,Archive,HTML5,CSS3,HTML,CSS,Ruby">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{{site.url}}/css/i.css">
+  <link rel="stylesheet" type="text/css" href="{{site.url}}/css/splash.css"/>
+  <link rel="apple-touch-icon-precomposed" href="{{site.url}}/img/favicon.png" />
+  <link rel="icon" href="{{site.url}}/img/favicon.png" />
+  
+  <style>
+      body {
+          background-image:url('{{site.url}}/img/moss.jpg');
+      }
+      
+      @media only screen and (max-width: 780px){    
+          body {
+              background-image:url('{{site.url}}/img/mossmobile.jpg');
+          }
+      }    
+  </style>
+  
+</head>
+
+<body>
+  {% include _navigation.html %}
+  {{content}}
+
+<footer class="sans-serif">
+  <div class="single-column">
+	  <!--<nav role="navigation" class="site-nav">-->
+
+	<nav id="main-nav" role="navigation">
+
+		<ul data-menuTitle="" class="menu">
+			<li><a accesskey="h" href="{{site.url}}/">Home</a></li>
+			<li><a accesskey="a" href="{{site.url}}/about">About</a></li>
+			<li><a accesskey="w" href="{{site.url}}/archives">Articles</a></li>
+			<li><a accesskey="c" href="{{site.url}}/contact">Contact</a></li>
+		</ul>
+
+		<a id="nav-close" class="jump-link" href="#"><span class="vishid">Jump to top</span></a>
+	</nav>
+
+	<!--</nav>-->
+    <p class="meta center"><a href="http://beardandbeanie.com/share" style="color: #5CC49B">Creative Commons</a></p>
+    <p class="meta center" style="color: #5CC49B"><a href="https://twitter.com/BeardAndBeanie" style="color: #5CC49B">@BeardAndBeanie</a> &laquo; &nabla; &Delta; &raquo; 
+    <a href="https://plus.google.com/100297404896439835990" rel="publisher" style="color: #5CC49B">google+</a></p>
+    <p class="meta center"><a href="mailto:connect@beardandbeanie.com" style="color: #5CC49B">e-mail</a></p>
+  </div>
+</footer>
+    {% include _google_analytics.html %}  
+</body>
+</html>
+
